@@ -44,15 +44,5 @@
   $from_email = $_POST['email'];
   $subject = $_POST['subject'];
 
-  $headers = "Reply-To: The Sender <preetgill8112@yandex.com\r\n"; 
-  $headers .= "Return-Path: The Sender <preetgill8112@yandex.com>\r\n"; 
-  $headers .= "From: The Sender <preetgill8112@yandex.com>\r\n";  
-  $headers .= "Organization: Sender Organization\r\n";
-  $headers .= "MIME-Version: 1.0\r\n";
-  $headers .= "Content-type: text/plain; charset=iso-8859-1\r\n";
-  $headers .= "X-Priority: 3\r\n";
-  $headers .= "X-Mailer: PHP". phpversion() ."\r\n" ;
-
-  mail("preetgill8112@yandex.com","My subject","hello sidhu", $headers);
-  echo "OK"
+  mail("preetgill8112@yandex.com","My subject","hello sidhu");
 ?>
