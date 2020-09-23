@@ -43,16 +43,23 @@
   $from_name = $_POST['name'];
   $from_email = $_POST['email'];
   $subject = $_POST['subject'];
-
-  $headers = "Reply-To: The Sender <preetgill8112@yandex.com\r\n"; 
-  $headers .= "Return-Path: The Sender <preetgill8112@yandex.com>\r\n"; 
-  $headers .= "From: The Sender <preetgill8112@yandex.com>\r\n";  
+  $message =  $_POST['message'];
+  $data = '<html><body>';
+  $data .= '<b> Client Name: </b>' . $from_name . '<br> 
+  <b> Client email: </b>' . $from_email .' <br>
+  <b> Message: </b> '. $message .' <br> ';
+  $data .= '</body></html>';
+  $headers = "Reply-To: The Sender <spjagirdar@gmail.com\r\n"; 
+  $headers .= "Return-Path: The Sender <spjagirdar@gmail.com>\r\n"; 
+  $headers .= "From: The Sender <spjagirdar@gmail.com>\r\n";  
   $headers .= "Organization: Sender Organization\r\n";
   $headers .= "MIME-Version: 1.0\r\n";
-  $headers .= "Content-type: text/plain; charset=iso-8859-1\r\n";
+  $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
   $headers .= "X-Priority: 3\r\n";
   $headers .= "X-Mailer: PHP". phpversion() ."\r\n" ;
 
-  mail("preetgill8112@yandex.com","My subject","hello sidhu", $headers);
+  mail("spjagirdar@gmail.com",$subject,$data, $headers);
+ 
   echo "OK"
+ 
 ?>
