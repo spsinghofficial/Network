@@ -47,6 +47,7 @@
   $data = '<html><body>';
   $data .= '<b> Client Name: </b>' . $from_name . '<br> 
   <b> Client email: </b>' . $from_email .' <br>
+  <b> Subject: </b>' . $subject .' <br>
   <b> Message: </b> '. $message .' <br> ';
   $data .= '</body></html>';
   $headers = "Reply-To: The Sender <spjagirdar@gmail.com\r\n"; 
